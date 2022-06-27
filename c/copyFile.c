@@ -7,5 +7,5 @@
     while ((c = getchar()) != EOF) { // EOF = -1 = CTRL+Z / CTRL+D
         // printf("The character entered is: %c \n", c);
         putchar(c);
-    } 
+    }
  }
