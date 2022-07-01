@@ -11,7 +11,7 @@ int main() {
     char longest[MAXLINE]; /* longest line saved here */
 
     max = 0;
-    while ((len = getLine(line, MAXLINE)) > max) {
+    while ((len = getLine(line, MAXLINE)) > 0) {
         if (len > max) {
             max = len;
             copy(longest, line);
