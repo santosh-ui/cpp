@@ -38,7 +38,7 @@
 int main() {
     int v1 = 0, v2 = 0; // declare two variables to store the numbers entered by the user
     std::cout << "Enter two numbers: \n" << std::endl;
-    // prompt the user to enter two numbers seperated by two lines or a new line
+    // prompt the user to enter two numbers seperated by a space or a new line
     std::cin >> v1 >> v2;
     if(v1 <= v2) { // if v1 is less than or equal to v2
         while(v1 <= v2) {
