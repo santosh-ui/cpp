@@ -1,5 +1,12 @@
 #include<iostream>
 using std::cout, std::endl;
+
+void Double(double *A, int size) {
+    for(int i = 0; i < size; i++){
+        A[i] = 2*A[i];
+    }
+}
+
 double sumOfArray(double *A, int size) { // int *A or int A[]  ...it's the same
     double sum = 0.0;
     cout << "sizeof(A) = " << sizeof(A) << endl;
@@ -19,7 +26,8 @@ int main(void) {
     cout << "*A+1 = " << *A+1 << endl; // adds 1 to value at (index 0) or first value
     cout << "*(A+1) = " << *(A+1) << endl; // moves the pointer to the next index
     A[2] = 11*7.5;
-    for (int i = 0; i < 5; i++) {
+    int i = 0;
+    for (i = 0; i < 5; i++) {
         cout << "A[" << i 
         << "] = " << A[i] << endl;
     }
@@ -28,5 +36,11 @@ int main(void) {
     // A++; // invalid
     double sum = sumOfArray(A, size); // A can be used for &A[0]
     cout << "sum = " << sum << endl;
+    cout << "{ " << endl;
+    Double(A, size);
+    for (i = 0; i < size; i++) {
+        cout << A[i] << ", " << endl;
+    }
+    cout << "}" << endl;
     return 0;
 } 
