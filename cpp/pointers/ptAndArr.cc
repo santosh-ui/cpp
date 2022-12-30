@@ -6,7 +6,7 @@ void Double(double *A, int size) {
         A[i] = 2*A[i];
     }
 }
-
+ 
 double sumOfArray(double *A, int size) { // int *A or int A[]  ...it's the same
     double sum = 0.0;
     cout << "sizeof(A) = " << sizeof(A) << endl;
