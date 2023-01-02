@@ -21,7 +21,7 @@ int main(void) {
     cout << "*A: " << *A << endl; // gives address of 1-D array of 3 elements
     cout << "A[0]: " << A[0] << endl;
 
-    int (*p0)[3] = A;
+    int (*p0)[3] = A; // declaring pointer to 1-D array of 3 integers
     cout << "*p0: " << *p0 << endl;
 
     cout << "&A: " << &A << endl;
