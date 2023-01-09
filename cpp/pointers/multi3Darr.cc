@@ -2,7 +2,9 @@
 using std::cout, std::cin, std::endl;
 int main(void) {
     int A[3][2][2];
-
+    int B[2][1][2] = {{12, 14},
+                      {5, 20}};
+    
     int x = 0;
     for(int i = 0; i < 3; i++) {
         for (int j = 0; j < 2; j++) {
@@ -13,6 +15,14 @@ int main(void) {
         }
     }
     
+    for(int i = 0; i < 2; i++) {
+        for (int j = 0; j < 1; j++) {
+            for(int k = 0; k < 2; k++){
+                // B[i][j][k] = x++;
+                cout << B[i][j][k] << endl;
+            }
+        }
+    }
 
     cout << "A: " << A << endl;
     // cout << "*A: " << *A << endl;
