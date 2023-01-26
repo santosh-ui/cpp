@@ -20,7 +20,15 @@ int main(void) {
     vector<string> svec(10, "null");
     // legal: svec contains 10 strings whose values are all "null"
 
-
+    vector<int> v1; // empty vector with 0 elements
+    vector<int> v2(10); // int vector with 10 elements initialized to 0
+    vector<int> v3(10, 52); // 10 elements initialized to 52
+    vector<int> v4{10}; // 1 element with value 10
+    vector<int> v5{10, 9}; // 2 elements with value 9
+    vector<string> v6{10}; // vector of type string with 10 elements of empty string
+    vector<string> v7{10, "hi!"}; // 10 elements initialized with "hi!"
+    // vector<string> v8{5, "hi", "dude!"}; // ? list initialization is not possible with 
+    // with an element having integer value
 
     return 0;
 }
