@@ -68,7 +68,7 @@ int main(void) {
     // unsigned value. As a result we can gaurantee that the return value 
     // will be greater than or equal to 0
     while (cin >> n) {
-        if (n < hexDigits.size())
+        if (n < hexDigits.size()) // ignore invalid input
             result += hexDigits[n];
     }
     cout << "The resulting Hex Number is:\n" << result << endl;
