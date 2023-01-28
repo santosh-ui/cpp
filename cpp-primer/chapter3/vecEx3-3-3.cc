@@ -38,30 +38,38 @@ int main(void) {
 //     print_vec(v6);
 //     print_vec(v7);
 
-    vector<string> text;
-    string word;
+    // vector<string> text;
+    // string word;
     
-    cout << "Enter each word seperated by space: " << endl;
-    while (cin >> word) {
-        if (!word.empty()) 
-            text.push_back(word);
-    }
+    // cout << "Enter each word seperated by space: " << endl;
+    // while (cin >> word) {
+    //     if (!word.empty()) 
+    //         text.push_back(word);
+    // }
 
-    for (string& word: text)
-        for (char& c: word)
-            c = toupper(c);
+    // for (string& word: text)
+    //     for (char& c: word)
+    //         c = toupper(c);
     
     // for (string& word: text) // for each word in the text
     //     cout << word << " "; // print the words in the same line
     // cout << endl;
 
-    for (decltype(text.size()) word = 0; // vector<string>::size_type
-        word < text.size();
-        word++
-    ) {
-        cout << text[word] << " "; // print each word in the vector seperated by space
-        if ((word+1) % 8 == 0) // if it is eighth word
-            cout << endl; // print a new line
-    }
+    // for (decltype(text.size()) word = 0; // vector<string>::size_type
+    //     word < text.size();
+    //     word++
+    // ) {
+    //     cout << text[word] << " "; // print each word in the vector seperated by space
+    //     if ((word+1) % 8 == 0) // if it is eighth word
+    //         cout << endl; // print a new line
+    // }
+
+    // what is wrong with the below code?
+    vector<int> ivec; // defining an empty vector (size: 0) of type int
+    // ivec[0] = 1000; // error: cannot access elements of an empty vector
+    // we can just add an element to a vector using push_back() member
+    ivec.push_back(1000);
+    cout << "\"" << ivec[0] << "\"" << endl;
+
     return 0;
 }
