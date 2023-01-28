@@ -72,24 +72,47 @@ int main(void) {
     // cout << "\"" << ivec[0] << "\"" << endl;
 
     // first way
-    vector<int> vec1;
-    for (decltype(vec1.size()) i = 0; i < 10; i++)
-        vec1.push_back(42);
+    // vector<int> vec1;
+    // for (decltype(vec1.size()) i = 0; i < 10; i++)
+    //     vec1.push_back(42);
 
     // second way
-    vector<int> vec2(10, 42);
+    // vector<int> vec2(10, 42);
 
     // third way
-    vector<int> vec3{42, 42, 42, 42, 42, 42, 42, 42, 42, 42};
+    // vector<int> vec3{42, 42, 42, 42, 42, 42, 42, 42, 42, 42};
 
     // second way is the prefered way to do so
     // because it is easy and clear 
     // the othe two are unwieldy
 
-    cout << vec1.size() << endl;
-    cout << vec2.size() << endl;
-    cout << vec3.size() << endl;
+    // cout << vec1.size() << endl;
+    // cout << vec2.size() << endl;
+    // cout << vec3.size() << endl;
 
+    vector<int> iv;
+    for (vector<int>::size_type num = 0; num < 9; num++)
+        iv.push_back(num+1);
+
+    cout << "size of iv vector is: " << iv.size() << endl;
+    cout << "iv elements are: ";
+    for (int i: iv) {
+        cout << i << " ";
+    }
+    cout << endl;
+    
+    // adding pair of adjecent numbers
+    for (vector<int>::size_type i = 0; i < iv.size(); i += 2)
+        if (i+1 < iv.size())
+        cout << iv[i] + iv[i+1] << " ";
+        else cout << iv[i];
+    cout << endl;
+
+    // adding pair of the first and last elements, 
+    // followed by the sum of the second and second-to-last, and so on
+    for (vector<int>::size_type i = 0; i < iv.size()/2; i++)
+        cout << iv[i] + iv[iv.size()-i-1] << " ";
+    cout << endl;
 
     return 0;
 }
