@@ -65,11 +65,31 @@ int main(void) {
     // }
 
     // what is wrong with the below code?
-    vector<int> ivec; // defining an empty vector (size: 0) of type int
+    // vector<int> ivec; // defining an empty vector (size: 0) of type int
     // ivec[0] = 1000; // error: cannot access elements of an empty vector
     // we can just add an element to a vector using push_back() member
-    ivec.push_back(1000);
-    cout << "\"" << ivec[0] << "\"" << endl;
+    // ivec.push_back(1000);
+    // cout << "\"" << ivec[0] << "\"" << endl;
+
+    // first way
+    vector<int> vec1;
+    for (decltype(vec1.size()) i = 0; i < 10; i++)
+        vec1.push_back(42);
+
+    // second way
+    vector<int> vec2(10, 42);
+
+    // third way
+    vector<int> vec3{42, 42, 42, 42, 42, 42, 42, 42, 42, 42};
+
+    // second way is the prefered way to do so
+    // because it is easy and clear 
+    // the othe two are unwieldy
+
+    cout << vec1.size() << endl;
+    cout << vec2.size() << endl;
+    cout << vec3.size() << endl;
+
 
     return 0;
 }
