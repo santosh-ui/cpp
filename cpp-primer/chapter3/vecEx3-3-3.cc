@@ -64,6 +64,8 @@ int main(void) {
     //         cout << endl; // print a new line
     // }
 
+
+
     // what is wrong with the below code?
     // vector<int> ivec; // defining an empty vector (size: 0) of type int
     // ivec[0] = 1000; // error: cannot access elements of an empty vector
@@ -113,6 +115,8 @@ int main(void) {
     for (vector<int>::size_type i = 0; i < iv.size()/2; i++)
         cout << iv[i] + iv[iv.size()-i-1] << " ";
     cout << endl;
+
+    // revise 3.20 again
 
     return 0;
 }
